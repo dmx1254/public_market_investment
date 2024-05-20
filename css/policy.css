@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #9ca3af;
+}
+
+.content {
+  display: flex;
+  margin: 0px 20px;
+}
+
+.content .policy_container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.policy_container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1b4332;
+  text-align: center;
+}
+
+.policy_container h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.policy_container p {
+  font-size: 1.1em;
+  color: #4b5563;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Responsive Styles */
+@media (max-width: 742px) {
+  .content {
+    flex-direction: column;
+    margin: 0px 10px;
+  }
+
+  .policy_container {
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .policy_container h1 {
+    font-size: 1.5em;
+  }
+
+  .policy_container h2 {
+    font-size: 1.2em;
+  }
+
+  .policy_container p {
+    font-size: 1em;
+  }
+}

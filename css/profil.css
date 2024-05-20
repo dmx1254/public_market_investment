@@ -1,0 +1,279 @@
+.custom-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.content {
+  display: flex;
+  margin: 0px 20px;
+}
+
+.custom-container .content .container {
+  max-width: 850px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(35px);
+}
+
+.container .btn-container .btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.container .btn-container .btn.active {
+  background-color: #1b4332;
+  color: #fff;
+}
+
+.custom-container h1 {
+  text-align: center;
+}
+
+.custom-container .profile-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.custom-container .profile-info label {
+  font-weight: bold;
+}
+
+.custom-container .profile-info p {
+  margin: 5px 0;
+}
+
+.custom-container .form-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.custom-container .form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-container .form-container input[type="text"],
+.custom-container .form-container textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.custom-container .form-container textarea:focus {
+  border: 1px solid #22c55e;
+}
+
+.custom-container .form-container input[type="text"]:focus {
+  border: 1px solid #22c55e;
+}
+
+/* Style pour l'input de type file */
+.file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Styles pour la section des annonces */
+.container #annonces-section {
+  margin-top: 20px;
+}
+
+/* Style du titre des annonces */
+.container #annonces-section h2 {
+  color: #1b4332;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style des annonces individuelles */
+.annonce-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* border: none; */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style du titre de l'annonce */
+.annonce-title {
+  font-weight: bold;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+/* Style du numéro de référence */
+.annonce-reference {
+  color: #666;
+}
+
+/* Style de la catégorie */
+.annonce-category {
+  color: #666;
+}
+
+/* Style pour le message si aucune annonce n'est trouvée */
+.no-annonces {
+  color: #dc2626;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #0f2e21; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; /* Taille de police */
+  cursor: pointer;
+}
+
+/* Style pour le texte du bouton */
+.file-input-label-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Style pour l'icône du bouton (facultatif) */
+.file-input-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px; /* Espacement à droite de l'icône */
+}
+
+/* Style pour l'effet de survol */
+.file-input-label:hover {
+  opacity: 0.9; /* Opacite au survol */
+}
+
+/* Style pour l'input de type date */
+input[type="date"] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  outline: none;
+  margin: 4px 0px;
+}
+
+/* Style pour le texte de l'étiquette */
+label {
+  color: #1b4332;
+  font-size: 18px;
+}
+
+/* Style pour le texte de l'input */
+input[type="date"]::placeholder {
+  color: #999;
+}
+
+/* Style pour l'input de type date lorsqu'il est en focus */
+input[type="date"]:focus {
+  border-color: #1b4332;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.custom-container .form-container input[type="submit"] {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background-color: #1b4332;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-container .form-container input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 942px) {
+  .custom-container .content .container {
+    max-width: 800px;
+  }
+
+  .custom-container .profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .custom-container .content .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 810px) {
+  .content {
+    margin: 0px 20px;
+  }
+  .custom-container .content .container {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 570px) {
+  .custom-container .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 50px auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 373px) {
+  .content {
+    margin: 0px;
+  }
+}

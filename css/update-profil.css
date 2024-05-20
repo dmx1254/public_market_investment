@@ -1,0 +1,174 @@
+body {
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+}
+
+.content {
+  display: flex;
+  margin: 0px 20px;
+}
+
+.content .container {
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transform: translateX(35px);
+}
+
+.container h1 {
+  color: #1b4332;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.container h2 {
+  color: #1b4332;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info .flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-info label {
+  width: 150px;
+  font-weight: bold;
+  color: #1b4332;
+}
+
+.profile-info p {
+  color: #333;
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #1b4332;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid #1b4332;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1b4332;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .content .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 810px) {
+  .content {
+    margin: 0px 20px;
+  }
+  .content .container {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 498px) {
+  .content .container {
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 464px) {
+  .content .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 432px) {
+  .content .container {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 388px) {
+  .content .container {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 376px) {
+  .content {
+    margin: 0px;
+  }
+}

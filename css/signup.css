@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, label {
+  color: #1b4332;
+}
+
+.content {
+  display: flex;
+}
+
+.content .content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}

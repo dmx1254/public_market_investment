@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  margin: 0px 20px;
+}
+
+.content .calendar_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(35px);
+}
+
+.chart-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-container .chart-1 {
+  background-color: #dbeafe;
+}
+
+.chart-container .chart-2 {
+  background-color: #fee2e2;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #1b4332;
+  font-weight: bold;
+}
+
+.highlight-green {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.highlight-red {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.highlight-orange {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.highlight-yellow {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1019px) {
+  .content .calendar_container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 810px) {
+  .content .calendar_container {
+    transform: translateX(0px);
+  }
+  .description {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 757px) {
+  .content .calendar_container {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 647px) {
+  .content .calendar_container {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 567px) {
+  .content .calendar_container {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 489px) {
+  .content .calendar_container {
+    max-width: 420px;
+    .chart-description {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 453px) {
+  .content .calendar_container {
+    max-width: 390px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 423px) {
+  .content .calendar_container {
+    max-width: 330px;
+  }
+}

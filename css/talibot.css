@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .talibot {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100vw;
+    padding: 0 20px;
+    background-color: #f4f6fd;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    border-top: 1px solid #eee;
+  }
+  
+  .talibot a {
+    text-decoration: none;
+  }
+  
+  .talibot a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #1f2937;
+  }
+  
+  
+  @media (max-width: 810px) {
+    .talibot {
+      display: flex;
+    }
+  }
