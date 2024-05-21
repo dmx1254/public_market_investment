@@ -39,9 +39,8 @@ if (isset($_SESSION["user"])) {
         <div class="profil-container">
             <div class="container">
                 <div class="flex items-center justify-center gap-4 mb-4 btn-container">
-                    <button class="btn active" id="btn-profile" onclick="showSection('profile')">Informations
-                        personnelles</button>
-                    <button class="btn" id="btn-annonces" onclick="showSection('annonces')">Mes Annonces</button>
+                    <button class="btn active" id="btn-profile" onclick="showSection('profile')">Profil</button>
+                    <button class="btn" id="btn-annonces" onclick="showSection('annonces')">Annonces</button>
                     <button class="btn" id="btn-candidatures"
                         onclick="showSection('candidatures')">Candidatures</button>
                 </div>
@@ -169,7 +168,7 @@ if (isset($_SESSION["user"])) {
                     <?php
                     include "db.php";
                     $user = $_SESSION["user"];
-                    $sql = "SELECT a.titre, a.numero_reference, ap.firstname, ap.lastname, ap.email, ap.id_annonce
+                    $sql = "SELECT a.titre, a.numero_reference, ap.firstname, ap.lastname, ap.email, ap.phone, ap.id_annonce
                             FROM Apply ap
                             JOIN Annonce a ON ap.id_annonce = a.id
                             WHERE a.annonceur_id = ?";
@@ -182,8 +181,9 @@ if (isset($_SESSION["user"])) {
                         while ($row = $result->fetch_assoc()) {
                             echo "<div class='candidature-item'>";
                             echo "<p class='candidature-title'>Annonce: " . $row["titre"] . " (Réf: " . $row["numero_reference"] . ")</p>";
-                            echo "<p class='candidature-name'>Nom: " . $row["firstname"] . " " . $row["lastname"] . "</p>";
+                            echo "<p class='candidature-name'>Prenom et Nom: " . $row["lastname"] . " " . $row["firstname"] . "</p>";
                             echo "<p class='candidature-email'>Email: " . $row["email"] . "</p>";
+                            echo "<p class='candidature-email'>Téléphone: " . $row["phone"] . "</p>";
                             echo "<a class='candidature-link' href='apply.php?numero_annonce=" . $row["id_annonce"] . "'>Voir l'annonce</a>";
                             echo "</div>";
                         }

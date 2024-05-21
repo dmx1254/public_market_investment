@@ -188,7 +188,6 @@ label {
   font-size: 18px;
 }
 
-
 input[type="date"]::placeholder {
   color: #999;
 }
@@ -272,7 +271,7 @@ input[type="date"]:focus {
 }
 
 @media (max-width: 942px) {
-  .custom-container .content .container {
+  .custom-container .content .profil-container {
     max-width: 800px;
   }
 
@@ -288,7 +287,7 @@ input[type="date"]:focus {
 }
 
 @media (max-width: 900px) {
-  .custom-container .content .container {
+  .custom-container .content .profil-container {
     max-width: 700px;
   }
 }
@@ -297,7 +296,7 @@ input[type="date"]:focus {
   .content {
     margin: 0px 20px;
   }
-  .custom-container .content .container {
+  .custom-container .content .profil-container {
     transform: translateX(0px);
   }
 }
@@ -313,8 +312,14 @@ input[type="date"]:focus {
   }
 }
 
-@media (max-width: 373px) {
+@media (max-width: 407px) {
   .content {
     margin: 0px;
+  }
+}
+
+@media (max-width: 389px) {
+  .custom-container .content .profil-container {
+    padding: 5px;
   }
 }

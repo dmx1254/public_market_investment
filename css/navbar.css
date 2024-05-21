@@ -15,15 +15,15 @@
 }
 
 .logo .logodesk {
-  width: 95%;
-  height: 32px;
+  width: 93%;
+  height: 30px;
   object-fit: contain;
 }
 
 .logo .logomob {
   display: none;
   width: 120;
-  height: 40px;
+  height: 32px;
   object-fit: cover;
   object-position: center;
 }
@@ -148,9 +148,10 @@
 }
 
 @media (max-width: 428px) {
-  .logo img {
-    width: 70px;
+  .logo .logomob {
+    width: 100%;
     height: 32px;
+    object-fit: contain;
   }
   .search input {
     width: 200px;

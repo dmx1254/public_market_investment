@@ -1,0 +1,12 @@
+coinpal:
+
+secret key: 796aaee83677535b48ddc3090e360b91833b754b24277539f684f636a232cf01
+
+merchant no: 100000464
+
+email: pai@ibendouma.com
+
+url du magasin: www.ibendouma.com
+
+jeton d'access:	e9240d50
+
