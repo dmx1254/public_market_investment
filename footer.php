@@ -35,7 +35,7 @@
             <a href="https://www.worldbank.org/fr/home"><i class="fas fa-link"></i>Banque mondiale</a>
         </div>
         <div class="footer-sec3">
-            <img src="images/morocco.jpg" alt="logo picture">
+            <img src="images/logodesk.png" alt="logo picture" class="bg-white" style="padding: 1px;">
             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i
                         class="fab fa-facebook-f"></i></a>

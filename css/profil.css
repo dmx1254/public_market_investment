@@ -1,5 +1,4 @@
 .custom-container {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +8,10 @@
   margin: 0px 20px;
 }
 
-.custom-container .content .container {
+.custom-container .content .profil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 850px;
   padding: 20px;
   margin: 20px auto;
@@ -84,19 +86,16 @@
   border: 1px solid #22c55e;
 }
 
-/* Style pour l'input de type file */
 .file-input-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
 
-/* Styles pour la section des annonces */
 .container #annonces-section {
   margin-top: 20px;
 }
 
-/* Style du titre des annonces */
 .container #annonces-section h2 {
   color: #1b4332;
   font-size: 1.5rem;
@@ -104,7 +103,6 @@
   margin-bottom: 10px;
 }
 
-/* Style des annonces individuelles */
 .annonce-item {
   display: flex;
   flex-direction: column;
@@ -116,7 +114,6 @@
   margin-bottom: 10px;
 }
 
-/* Style du titre de l'annonce */
 .annonce-title {
   font-weight: bold;
   color: #333;
@@ -126,17 +123,14 @@
   -webkit-line-clamp: 1;
 }
 
-/* Style du numéro de référence */
 .annonce-reference {
   color: #666;
 }
 
-/* Style de la catégorie */
 .annonce-category {
   color: #666;
 }
 
-/* Style pour le message si aucune annonce n'est trouvée */
 .no-annonces {
   color: #dc2626;
 }
@@ -154,33 +148,29 @@
 .file-input-label {
   display: inline-block;
   padding: 8px 20px;
-  background-color: #0f2e21; /* Couleur de fond */
-  color: #fff; /* Couleur du texte */
+  background-color: #0f2e21;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px; /* Taille de police */
+  font-size: 16px;
   cursor: pointer;
 }
 
-/* Style pour le texte du bouton */
 .file-input-label-text {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* Style pour l'icône du bouton (facultatif) */
 .file-input-icon {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 8px; /* Espacement à droite de l'icône */
+  margin-right: 8px;
 }
 
-/* Style pour l'effet de survol */
 .file-input-label:hover {
-  opacity: 0.9; /* Opacite au survol */
+  opacity: 0.9;
 }
 
-/* Style pour l'input de type date */
 input[type="date"] {
   padding: 8px;
   width: 100%;
@@ -193,18 +183,16 @@ input[type="date"] {
   margin: 4px 0px;
 }
 
-/* Style pour le texte de l'étiquette */
 label {
   color: #1b4332;
   font-size: 18px;
 }
 
-/* Style pour le texte de l'input */
+
 input[type="date"]::placeholder {
   color: #999;
 }
 
-/* Style pour l'input de type date lorsqu'il est en focus */
 input[type="date"]:focus {
   border-color: #1b4332;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -224,6 +212,59 @@ input[type="date"]:focus {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.candidatures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.candidature-item {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.candidature-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1b4332;
+}
+
+.candidature-name,
+.candidature-email,
+.candidature-link {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.candidature-link {
+  color: #1b4332;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.candidature-link:hover {
+  text-decoration: underline;
+}
+
+.no-candidatures {
+  font-size: 16px;
+  color: #999999;
+}
+
+#candidatures-section h2 {
+  color: #1b4332;
+  margin-bottom: 20px;
 }
 
 .custom-container .form-container input[type="submit"]:hover {

@@ -61,7 +61,7 @@
           Les <h2>Marchés au Maroc</h2>
         </span>
         <div class="market-desc">
-          Chaque année, le gouvernement du Sénégal dépense des milliards de dollars, dans la commande publique de biens
+          Chaque année, le gouvernement du maroc dépense des milliards de dollars, dans la commande publique de biens
           et services suivant la procedure de passation des marchés (Plans de passations, Avis généraux, Appels d'offres
           (AAO), Avis d'attribution provisoire de marchés ou Avis d'attribution definitive de marchés, Ententes
           directes, Arrêtés de résiliation, Contentieux, Résolutions, Saisines DCMP). Nous aidons les dirigeants du

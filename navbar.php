@@ -20,7 +20,10 @@ if (!isset($_SESSION)) {
   <nav class="navbar">
     <div class="logo">
       <a href="/">
-        <img src="images/morocco.jpg" alt="logo" />
+        <img src="images/logodesk.png" alt="logo" class="logodesk" />
+      </a>
+      <a href="/">
+        <img src="images/logomob.png" alt="logo" class="logomob" />
       </a>
     </div>
     <div class="search">

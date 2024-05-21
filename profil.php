@@ -36,11 +36,15 @@ if (isset($_SESSION["user"])) {
     <?php include "navbar.php"; ?>
     <main class="content">
         <?php include "sidebar.php"; ?>
-        <div class="container">
-            <div class="flex items-center justify-center gap-4 mb-4 btn-container">
-                <button class="btn active" id="btn-profile" onclick="showSection('profile')">Informations
-                    personnelles</button>
-                <button class="btn" id="btn-annonces" onclick="showSection('annonces')">Mes Annonces</button>
+        <div class="profil-container">
+            <div class="container">
+                <div class="flex items-center justify-center gap-4 mb-4 btn-container">
+                    <button class="btn active" id="btn-profile" onclick="showSection('profile')">Informations
+                        personnelles</button>
+                    <button class="btn" id="btn-annonces" onclick="showSection('annonces')">Mes Annonces</button>
+                    <button class="btn" id="btn-candidatures"
+                        onclick="showSection('candidatures')">Candidatures</button>
+                </div>
             </div>
 
             <div id="profile-section" style="width: 100%;">
@@ -158,6 +162,40 @@ if (isset($_SESSION["user"])) {
                     </form>
                 </div>
             </div>
+
+            <div id="candidatures-section" class="hidden">
+                <h2 class="text-xl font-bold mb-4" style="color: #1b4332;">Candidatures</h2>
+                <div class="candidatures-list">
+                    <?php
+                    include "db.php";
+                    $user = $_SESSION["user"];
+                    $sql = "SELECT a.titre, a.numero_reference, ap.firstname, ap.lastname, ap.email, ap.id_annonce
+                            FROM Apply ap
+                            JOIN Annonce a ON ap.id_annonce = a.id
+                            WHERE a.annonceur_id = ?";
+                    $stmt = $connexion->prepare($sql);
+                    $stmt->bind_param("s", $user['id']);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<div class='candidature-item'>";
+                            echo "<p class='candidature-title'>Annonce: " . $row["titre"] . " (Réf: " . $row["numero_reference"] . ")</p>";
+                            echo "<p class='candidature-name'>Nom: " . $row["firstname"] . " " . $row["lastname"] . "</p>";
+                            echo "<p class='candidature-email'>Email: " . $row["email"] . "</p>";
+                            echo "<a class='candidature-link' href='apply.php?numero_annonce=" . $row["id_annonce"] . "'>Voir l'annonce</a>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "<p class='no-candidatures'>Aucune candidature trouvée.</p>";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
         </div>
     </main>
     <div id="toast" class="fixed bottom-4 right-10 flex items-center gap-1 bg-white text-green-600"
@@ -183,15 +221,22 @@ if (isset($_SESSION["user"])) {
         function showSection(section) {
             document.getElementById('profile-section').classList.add('hidden');
             document.getElementById('annonces-section').classList.add('hidden');
+            document.getElementById('candidatures-section').classList.add('hidden');
             document.getElementById('btn-profile').classList.remove('active');
             document.getElementById('btn-annonces').classList.remove('active');
+            document.getElementById('btn-candidatures').classList.remove('active');
 
             if (section === 'profile') {
                 document.getElementById('profile-section').classList.remove('hidden');
                 document.getElementById('btn-profile').classList.add('active');
-            } else {
+            } else if (section === 'annonces') {
                 document.getElementById('annonces-section').classList.remove('hidden');
                 document.getElementById('btn-annonces').classList.add('active');
+            } else if (section === 'candidatures') {
+                document.getElementById('candidatures-section').classList.remove('hidden');
+                document.getElementById('btn-candidatures').classList.add('active');
+            } else {
+
             }
         }
     </script>

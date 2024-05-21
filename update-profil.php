@@ -9,7 +9,7 @@ if (isset($_SESSION["user"])) {
     // var_dump($user);
 } else {
     // L'utilisateur n'est pas connecté, vous pouvez rediriger vers la page d'accueil
-    echo "<script>window.location.replace('index.php');</script>";
+    echo "<script>window.location.replace('signin.php');</script>";
     exit();
 }
 

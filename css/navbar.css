@@ -14,11 +14,18 @@
   z-index: 999;
 }
 
-.logo img {
-  width: 100px;
-  height: 42px;
-  border-radius: 1px;
+.logo .logodesk {
+  width: 95%;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo .logomob {
+  display: none;
+  width: 120;
+  height: 40px;
   object-fit: cover;
+  object-position: center;
 }
 
 .search input {
@@ -59,12 +66,32 @@
   color: #1b4332;
 }
 
-@media (max-width: 810px) {
-  .links .content-links .link-img {
+@media (max-width: 965px) {
+  .links .signup {
     display: none;
   }
-  
-  .links .signup {
+}
+
+@media (max-width: 821px) {
+  .logo .logodesk {
+    width: 80%;
+    height: 26px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 776px) {
+  .logo .logodesk {
+    display: none;
+  }
+
+  .logo .logomob {
+    display: flex;
+  }
+}
+
+@media (max-width: 810px) {
+  .links .content-links .link-img {
     display: none;
   }
 }
@@ -88,10 +115,10 @@
 }
 
 @media (max-width: 564px) {
-  .logo img {
+  /* .logo img {
     width: 80px;
     height: 32px;
-  }
+  } */
   .search input {
     width: 280px;
     padding: 6px 10px;

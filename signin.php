@@ -71,9 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="flex flex-col lg:flex-row w-full items-center shadow-2xl h-[410px] h-[400px] max-w-3xl lg:max-w-4xl md:ml-12"
         style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
         <div class="flex items-center justify-center h-full max-w-sm lg:w-1/2 bg-[#F4F6FD] p-8">
-          <span class="text-[#1b4332] text-xl lg:text-4xl leading-[45px]">
+          <span class="text-[#1b4332] text-xl lg:text-4xl leading-[47px]">
             Au Maroc, la Commande Publique s'élève à
-            <span class="text-3xl lg:text-5xl font-bold" style="color: #1b4332;">
+            <span class="text-3xl lg:text-4xl font-extrabold" style="color: #1b4332;">
               +335 milliards
             </span>
             DHS / an
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               Par ici
             </a>
           </span> -->
-          <button type="submit" class="p-2 outline-none w-full rounded text-center text-white bg-green-800">
+          <button type="submit" class="p-2 mt-2 outline-none w-full rounded text-center text-white bg-green-800">
             Se connecter
           </button>
           <span class="text-base text-gray-600">
